@@ -114,3 +114,8 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+function mowfni_corporate_enqueue_scripts() {
+    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), true );
+    wp_enqueue_script( 'plugin-script', get_template_directory_uri() . '/js/plugins.js', array(), true );
+}
+add_action( 'wp_enqueue_scripts', 'mowfni_corporate_enqueue_scripts' );

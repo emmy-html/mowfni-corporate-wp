@@ -99,12 +99,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
-
-body {
-  line-height: 1; }
 
 button {
   outline: 0; }
@@ -231,14 +226,14 @@ html {
   line-height: 1.4; }
 
 /*
-   * Remove text-shadow in selection highlight:
-   * https://twitter.com/miketaylr/status/12228805301
-   *
-   * Vendor-prefixed and regular ::selection selectors cannot be combined:
-   * https://stackoverflow.com/a/16982510/7133471
-   *
-   * Customize the background color to match your design.
-   */
+     * Remove text-shadow in selection highlight:
+     * https://twitter.com/miketaylr/status/12228805301
+     *
+     * Vendor-prefixed and regular ::selection selectors cannot be combined:
+     * https://stackoverflow.com/a/16982510/7133471
+     *
+     * Customize the background color to match your design.
+     */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -248,8 +243,8 @@ html {
   text-shadow: none; }
 
 /*
-   * A better looking default horizontal rule
-   */
+     * A better looking default horizontal rule
+     */
 hr {
   display: block;
   height: 1px;
@@ -259,10 +254,10 @@ hr {
   padding: 0; }
 
 /*
-   * Remove the gap between audio, canvas, iframes,
-   * images, videos and the bottom of their containers:
-   * https://github.com/h5bp/html5-boilerplate/issues/440
-   */
+     * Remove the gap between audio, canvas, iframes,
+     * images, videos and the bottom of their containers:
+     * https://github.com/h5bp/html5-boilerplate/issues/440
+     */
 audio,
 canvas,
 iframe,
@@ -272,22 +267,22 @@ video {
   vertical-align: middle; }
 
 /*
-   * Remove default fieldset styles.
-   */
+     * Remove default fieldset styles.
+     */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
 /*
-   * Allow only vertical resizing of textareas.
-   */
+     * Allow only vertical resizing of textareas.
+     */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
-     Browser Upgrade Prompt
-     ========================================================================== */
+       Browser Upgrade Prompt
+       ========================================================================== */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -320,6 +315,7 @@ h6 {
   margin: 0px !important; }
 
 h1 {
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase; }
   h1 span {
@@ -332,7 +328,7 @@ body {
   color: #003952;
   font-family: "Lato", sans-serif;
   /* default soft fade in animation */
-  animation: fadeIn .3s linear 0s 1; }
+  animation: fadeIn 0.3s linear 0s 1; }
 @keyframes fadeIn {
   from {
     opacity: 0; }
@@ -344,7 +340,7 @@ body {
     color: #003952;
     font-weight: bold;
     text-decoration: none;
-    transition: .3s all; }
+    transition: 0.3s all; }
     body p a:link:hover,
     body p a:visited:hover {
       border-bottom: 3px solid #00b5c2; }
@@ -456,7 +452,7 @@ nav {
 
 /* hero */
 #hero {
-  background: url("../img/hero.png") center/cover;
+  background: url("img/hero.png") center/cover;
   height: 350px; }
   #hero .hero-content {
     color: #fff; }
@@ -467,11 +463,13 @@ nav {
       text-transform: uppercase; }
       #hero .hero-content h1 span:nth-of-type(2) {
         font-weight: 300; }
+      #hero .hero-content h1 span#slides-companies p {
+        color: #a9cf38; }
     #hero .hero-content .hero-description {
       padding-top: 10px;
       text-align: center; }
       #hero .hero-content .hero-description p {
-        line-height: 1.2rem;
+        line-height: 1.5rem;
         padding: 10px 0px; }
       #hero .hero-content .hero-description i {
         color: #fff;
@@ -503,6 +501,7 @@ nav {
   z-index: 2; }
 
 #about article h2 {
+  font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.5rem;
   padding: 20px 0px;
@@ -518,17 +517,17 @@ nav {
     background: #003952;
     border: 3px solid #003952;
     color: #a9cf38;
-    transition: .3s background-color; }
+    transition: 0.3s background-color; }
     #about article:nth-of-type(2) .button-container a:link:hover,
     #about article:nth-of-type(2) .button-container a:visited:hover {
       background: none;
       border: 3px solid #003952;
       color: #003952;
-      transition: .3s background-color, .1s border-color; }
+      transition: 0.3s background-color, 0.1s border-color; }
 
 /* statistic/impact section */
 #impact .volunteer-impact {
-  background: url("../img/impact-hero.png") center/cover;
+  background: url("img/impact-hero.png") center/cover;
   color: #fff;
   padding: 10px 0px; }
   #impact .volunteer-impact h1 {
@@ -540,10 +539,13 @@ nav {
   #impact .volunteer-impact .volunteer-stats {
     padding-top: 10px; }
     #impact .volunteer-impact .volunteer-stats h3 {
+      color: #a9cf38;
       font-size: 3.5rem;
+      font-weight: bold;
       line-height: 2.5rem;
       padding-top: 10px; }
       #impact .volunteer-impact .volunteer-stats h3 span {
+        color: #fff;
         display: block;
         font-size: 1.25rem;
         font-weight: 300; }
@@ -654,7 +656,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h2, #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h3 {
+    #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h2,
+    #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h3 {
       font-size: 1rem; }
     #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h3 {
       font-weight: 300; }
@@ -677,8 +680,8 @@ footer {
   background: #003952; }
   footer h3 {
     color: #a9cf38;
-    font-size: .95rem;
-    line-height: .90rem;
+    font-size: 0.95rem;
+    line-height: 0.9rem;
     padding: 20px 0px;
     text-transform: uppercase; }
     footer h3 span {
@@ -861,7 +864,7 @@ footer#volunteer-page-footer {
           #single-partner-page-hero article .content-wrapper p span a:link:hover,
           #single-partner-page-hero article .content-wrapper p span a:visited:hover {
             border-bottom: 3px solid #00b5c2;
-            transition: .3s all; }
+            transition: 0.3s all; }
       #single-partner-page-hero article .content-wrapper p:last-of-type {
         padding-bottom: 10px; }
     #single-partner-page-hero article .content-wrapper h2 {
@@ -964,7 +967,7 @@ footer#volunteer-page-footer {
   #single-partner-event-page .single-event-page-info h2 span {
     font-weight: 300; }
     #single-partner-event-page .single-event-page-info h2 span:after {
-      content: ' \2022 '; }
+      content: " \2022 "; }
   #single-partner-event-page .single-event-page-info p {
     padding-bottom: 10px; }
   #single-partner-event-page .single-partner-event-page-slideshow aside img {
@@ -1030,15 +1033,16 @@ footer#volunteer-page-footer {
     height: 450px; }
     #hero .hero-content h1 {
       font-size: 2.25rem;
-      line-height: 2.10rem;
-      padding-top: 100px; }
+      line-height: 2.1rem;
+      padding-top: 75px; }
     #hero .hero-content .hero-description {
+      font-size: 1.5rem;
       margin: 0 auto;
-      width: 400px; }
+      width: 600px; }
 
   /* about */
   #about {
-    background: url("../img/about-hero.png") center/cover;
+    background: url("img/about-hero.png") center/cover;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1056,16 +1060,35 @@ footer#volunteer-page-footer {
       height: 500px; }
     #about article .content-wrapper h2 {
       font-size: 2rem;
-      line-height: 2.10rem; }
+      line-height: 2.1rem; }
 
   /* impact */
-  #impact .volunteer-impact h1 {
-    font-size: 3rem;
-    padding: 0px; }
+  #impact .volunteer-impact {
+    height: 500px; }
+    #impact .volunteer-impact h1 {
+      font-size: 3.75rem;
+      padding: 0px; }
+    #impact .volunteer-impact aside {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 30px !important; }
+      #impact .volunteer-impact aside h3 {
+        font-size: 5rem !important;
+        line-height: 3.5rem !important;
+        padding-top: 20px !important;
+        width: 50%; }
+        #impact .volunteer-impact aside h3 span {
+          font-size: 1.75rem !important; }
+        #impact .volunteer-impact aside h3:nth-of-type(even) {
+          text-align: right; }
 
   /* volunteer opportunities */
-  #volunteer h1 span {
-    display: inline-block; }
+  #volunteer h1 {
+    font-size: 2rem; }
+    #volunteer h1 span {
+      display: inline-block; }
   #volunteer .button-container.view-all {
     padding: 5px 0px; }
 
@@ -1244,22 +1267,22 @@ footer#volunteer-page-footer {
     width: 90%;
     margin: 0 auto; } }
 /* ==========================================================================
-     Helper classes
-     ========================================================================== */
+       Helper classes
+       ========================================================================== */
 /*
-   * Hide visually and from screen readers
-   */
+     * Hide visually and from screen readers
+     */
 .hidden {
   display: none !important; }
 
 /*
-  * Hide only visually, but have it available for screen readers:
-  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-  *
-  * 1. For long content, line feeds are not interpreted as spaces and small width
-  *    causes content to wrap 1 word per line:
-  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-  */
+    * Hide only visually, but have it available for screen readers:
+    * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    *
+    * 1. For long content, line feeds are not interpreted as spaces and small width
+    *    causes content to wrap 1 word per line:
+    *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -1273,10 +1296,10 @@ footer#volunteer-page-footer {
   /* 1 */ }
 
 /*
-  * Extends the .sr-only class to allow the element
-  * to be focusable when navigated to via the keyboard:
-  * https://www.drupal.org/node/897638
-  */
+    * Extends the .sr-only class to allow the element
+    * to be focusable when navigated to via the keyboard:
+    * https://www.drupal.org/node/897638
+    */
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -1288,22 +1311,22 @@ footer#volunteer-page-footer {
   width: auto; }
 
 /*
-  * Hide visually and from screen readers, but maintain layout
-  */
+    * Hide visually and from screen readers, but maintain layout
+    */
 .invisible {
   visibility: hidden; }
 
 /*
-  * Clearfix: contain floats
-  *
-  * For modern browsers
-  * 1. The space content is one way to avoid an Opera bug when the
-  *    `contenteditable` attribute is included anywhere else in the document.
-  *    Otherwise it causes space to appear at the top and bottom of elements
-  *    that receive the `clearfix` class.
-  * 2. The use of `table` rather than `block` is only necessary if using
-  *    `:before` to contain the top-margins of child elements.
-  */
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1315,19 +1338,19 @@ footer#volunteer-page-footer {
   clear: both; }
 
 /* ==========================================================================
-     EXAMPLE Media Queries for Responsive Design.
-     These examples override the primary ('mobile first') styles.
-     Modify as content requires.
-     ========================================================================== */
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
-     Print styles.
-     Inlined to avoid the additional HTTP request:
-     https://www.phpied.com/delay-loading-your-print-css/
-     ========================================================================== */
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       https://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
 @media print {
   *,
   *:before,
@@ -1349,9 +1372,9 @@ footer#volunteer-page-footer {
     content: " (" attr(title) ")"; }
 
   /*
-       * Don't show links that are fragment identifiers,
-       * or use the `javascript:` pseudo protocol
-       */
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
@@ -1365,9 +1388,9 @@ footer#volunteer-page-footer {
     page-break-inside: avoid; }
 
   /*
-       * Printing Tables:
-       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-       */
+         * Printing Tables:
+         * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
   thead {
     display: table-header-group; }
 
