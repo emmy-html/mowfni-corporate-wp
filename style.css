@@ -603,7 +603,6 @@ nav {
           justify-content: center;
           align-items: center;
           padding: 10px !important;
-          width: 25%;
           height: 450px;
           transition: .3s background-color; }
           #volunteer .volunteer-opp aside img {
@@ -741,7 +740,8 @@ footer {
   background: transparent;
   margin-bottom: 10px;
   position: absolute;
-  top: 375px; }
+  top: 375px;
+  padding-top: 60px; }
   #volunteer-page .volunteer-page-opportunities aside {
     text-align: center; }
     #volunteer-page .volunteer-page-opportunities aside img {
@@ -774,7 +774,6 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 10px !important;
-        width: 25%;
         height: 450px;
         transition: .3s background-color; }
         #volunteer-page .volunteer-page-opportunities aside img {
@@ -925,7 +924,6 @@ footer#volunteer-page-footer {
           justify-content: center;
           align-items: center;
           padding: 10px !important;
-          width: 25%;
           height: 450px;
           transition: .3s background-color; }
           #single-partner-page-work .single-partner-page-work-container aside img {
@@ -1097,6 +1095,8 @@ footer#volunteer-page-footer {
     font-size: 2rem; }
     #volunteer h1 span {
       display: inline-block; }
+  #volunteer .volunteer-opp aside {
+    width: 25%; }
   #volunteer .button-container.view-all {
     padding: 5px 0px; }
 
@@ -1182,7 +1182,10 @@ footer#volunteer-page-footer {
       padding-top: 230px; }
   #volunteer-page .volunteer-page-opportunities {
     position: absolute;
-    top: 450px; }
+    top: 450px;
+    flex-grow: 1; }
+    #volunteer-page .volunteer-page-opportunities aside {
+      width: 33% !important; }
 
   footer#volunteer-page-footer {
     position: absolute;

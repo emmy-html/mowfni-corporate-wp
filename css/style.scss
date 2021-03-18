@@ -756,6 +756,7 @@ footer {
     margin-bottom: 10px;
     position: absolute;
     top: 375px;
+    padding-top: 60px;
     p {
       padding: 0px 5px;
     }
@@ -1041,6 +1042,11 @@ footer#volunteer-page-footer {
         display: inline-block;
       }
     }
+    .volunteer-opp {
+      aside {
+        width: 25%;
+      }
+    }
     .button-container.view-all {
       padding: 5px 0px;
     }
@@ -1142,6 +1148,10 @@ footer#volunteer-page-footer {
     .volunteer-page-opportunities {
       position: absolute;
       top: 450px;
+      flex-grow: 1;
+      aside {
+        width: 33% !important;
+      }
     }
   }
   footer#volunteer-page-footer {
