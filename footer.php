@@ -1,10 +1,12 @@
-</div>
-<footer id="footer">
-<div id="copyright">
-&copy; <?php echo esc_html( date_i18n( __( 'Y', 'mowfni_corporate' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
-</div>
-</footer>
-</div>
-<?php wp_footer(); ?>
-</body>
-</html>
+   <footer>
+       <div class="content-wrapper">
+           <h3>The Meals On Wheels Foundation
+               <span>of Northern Illinois</span>
+               <span>Corporate Volunteering</span>
+           </h3>
+       </div>
+   </footer>
+   <?php wp_footer(); ?>
+   </body>
+
+   </html>

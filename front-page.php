@@ -5,184 +5,200 @@ Template Name: Front Page
 ?>
 <?php get_header(); ?>
 <main id="content">
-<section id="hero">
+    <section id="hero">
         <article class="hero-content">
-          <div class="content-wrapper">
-            <h1>
-              Doing Good Together
-              <span>In Northern Illinois</span>
-              <span>With the Help of</span>
-              <!-- (Auto slideshow but with text?)-->
-              <span id="slides-companies">
-                <p class="slide showing"><?php the_field('company_1'); ?></p>
-                <p class="slide"><?php the_field('company_2'); ?></p>
-                <p class="slide"><?php the_field('company_3'); ?></p>
-                <p class="slide"><?php the_field('company_4'); ?></p>
-            </span>
-            </h1>
-            <div class="hero-description">
-              <p>
-                With the help of people like you and your team, we're able to
-                provide thousands of meals to underserved groups. Take action
-                and join us today!
-              </p>
-              <a href="#volunteer"><i class="fas fa-chevron-down fa-2x"></i></a>
+            <div class="content-wrapper">
+                <h1>
+                    Doing Good Together
+                    <span>In Northern Illinois</span>
+                    <span>With the Help of</span>
+                    <!-- (Auto slideshow but with text?)-->
+                    <span id="slides-companies">
+                        <p class="slide showing"><?php the_field('company_1'); ?></p>
+                        <p class="slide"><?php the_field('company_2'); ?></p>
+                        <p class="slide"><?php the_field('company_3'); ?></p>
+                        <p class="slide"><?php the_field('company_4'); ?></p>
+                    </span>
+                </h1>
+                <div class="hero-description">
+                    <p>
+                        With the help of people like you and your team, we're able to
+                        provide thousands of meals to underserved groups. Take action
+                        and join us today!
+                    </p>
+                    <a href="#volunteer"><i class="fas fa-chevron-down fa-2x"></i></a>
+                </div>
             </div>
-          </div>
         </article>
-      </section>
-      <section id="about">
+    </section>
+    <section id="about">
         <article>
-          <div class="content-wrapper">
-            <h2>We have team building service projects for everyone!</h2>
-            <p>Whether you are an individual, part of a group, or corporation, you can help children in your community with a fun team building project. Your kindness makes a difference in not only the lives of your co-workers, friends, and family but also the lives of children in foster care.</p>
-            <br>
-            <div class="button-container">
-              <a href="/mowfni_corporate/volunteer">Learn More &#8250;</a>
+            <div class="content-wrapper">
+                <h2>We have team building service projects for everyone!</h2>
+                <p>Whether you are an individual, part of a group, or corporation, you can help children in your
+                    community with a fun team building project. Your kindness makes a difference in not only the lives
+                    of your co-workers, friends, and family but also the lives of children in foster care.</p>
+                <br>
+                <div class="button-container">
+                    <a href="/mowfni_corporate/volunteer">Learn More &#8250;</a>
+                </div>
             </div>
-          </div>
         </article>
         <article>
-          <div class="content-wrapper">
-            <h2>Double the Donation</h2>
-            <p>Did you know many companies offer matching gift programs to encourage philanthropy among their employees? Your company, your spouses’ company, or even a company you are retired from may match your gift! </p>
-            <div class="button-container">
-              <a href="/mowfni_corporate/gift-matching">Match A Gift &#8250;</a>
+            <div class="content-wrapper">
+                <h2>Double the Donation</h2>
+                <p>Did you know many companies offer matching gift programs to encourage philanthropy among their
+                    employees? Your company, your spouses’ company, or even a company you are retired from may match
+                    your gift! </p>
+                <div class="button-container">
+                    <a href="/mowfni_corporate/gift-matching">Match A Gift &#8250;</a>
+                </div>
             </div>
-          </div>
         </article>
-      </section>
-      <section id="impact">
+    </section>
+    <section id="impact">
         <article class="volunteer-impact">
-          <div class="content-wrapper">
-            <h1>Make An <span>Impact</span></h1>
-            <aside class="volunteer-stats">
-              <h3>
-                850+
-                <span>Volunteers</span>
-              </h3>
-              <h3>
-                7,300
-                <span>Older Americans Served</span>
-              </h3>
-              <h3>
-                73,000
-                <span>Hours Volunteered</span>
-              </h3>
-              <h3>
-                830,000
-                <span>Meals Delivered</span>
-              </h3>
-            </aside>
-            <div class="button-container">
-              <a href="/mowfni_corporate/volunteer">Get Involved &#8250;</a>
+            <div class="content-wrapper">
+                <h1>Make An <span>Impact</span></h1>
+                <aside class="volunteer-stats">
+                    <h3>
+                        850+
+                        <span>Volunteers</span>
+                    </h3>
+                    <h3>
+                        7,300
+                        <span>Older Americans Served</span>
+                    </h3>
+                    <h3>
+                        73,000
+                        <span>Hours Volunteered</span>
+                    </h3>
+                    <h3>
+                        830,000
+                        <span>Meals Delivered</span>
+                    </h3>
+                </aside>
+                <div class="button-container">
+                    <a href="/mowfni_corporate/volunteer">Get Involved &#8250;</a>
+                </div>
             </div>
-          </div>
         </article>
-      </section>
-      <section id="volunteer">
+    </section>
+    <section id="volunteer">
         <h1>Team Building <span>Activities</span></h1>
-          <div class="content-wrapper">
+        <div class="content-wrapper">
             <article class="volunteer-opp">
-              <aside>
-                <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-1.png" />
-                <h2>Deliver Meals</h2>
-                <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="button-container volunteer-opp-button">
-                  <a href="individual-activity.html">Learn More &#8250;</a>
-                </div>
-              </aside>
-              <aside>
-                <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-2.png" />
-                <h2>Wellness Checks</h2>
-                <h3><i class="far fa-clock"></i> Ongoing &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="button-container volunteer-opp-button">
-                  <a href="individual-activity.html">Learn More &#8250;</a>
-                </div>
-              </aside>
-              <aside>
-                <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-3.png" />
-                <h2>Blanket Making</h2>
-                <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="button-container volunteer-opp-button">
-                  <a href="individual-activity.html">Learn More &#8250;</a>
-                </div>
-              </aside>
+                <aside>
+                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-1.png" />
+                    <h2>Deliver Meals</h2>
+                    <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="button-container volunteer-opp-button">
+                        <a href="individual-activity.html">Learn More &#8250;</a>
+                    </div>
+                </aside>
+                <aside>
+                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-2.png" />
+                    <h2>Wellness Checks</h2>
+                    <h3><i class="far fa-clock"></i> Ongoing &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="button-container volunteer-opp-button">
+                        <a href="individual-activity.html">Learn More &#8250;</a>
+                    </div>
+                </aside>
+                <aside>
+                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-3.png" />
+                    <h2>Blanket Making</h2>
+                    <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <div class="button-container volunteer-opp-button">
+                        <a href="individual-activity.html">Learn More &#8250;</a>
+                    </div>
+                </aside>
             </article>
             <div class="button-container view-all">
-              <a href="/volunteer/corporate">Corporate &#8250;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="/volunteer/small-groups">Small Groups &#8250;</a>
+                <a href="/volunteer/corporate">Corporate &#8250;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/volunteer/small-groups">Small Groups &#8250;</a>
             </div>
-          </div>
-      </section>
-      <section id="spotlight">
+        </div>
+    </section>
+    <section id="spotlight">
         <div class="content-wrapper">
-          <h1>Thank you to Our <span>Recent Partners!</span></h1>
+            <h1>Thank you to Our <span>Recent Partners!</span></h1>
         </div>
         <article class="spotlight-partners">
-          <aside>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png" alt="Older Woman Smiling" />
-          </aside>
-          <aside>
-            <div class="content-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/aetna-page/volunteer_01.jpg" />
-              <h2>Aetna</h2>
-              <h3>Project Name</h3>
-              <div class="button-container">
-                <a href="corporate-partner.html">Learn More &#8250;</a>
-              </div>
-            </div>
-            <div class="content-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/design-pac/volunteer_02.jpg" />
-              <h2>Design Pac</h2>
-              <h3>Project Name</h3>
-              <div class="button-container">
-                <a href="corporate-partner.html">Learn More &#8250;</a>
-              </div>
-            </div>
-            <div class="content-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/caterpillar-inc/volunteer_01.jpg" />
-              <h2>Caterpillar Inc.</h2>
-              <h3>Project Name</h3>
-              <div class="button-container">
-                <a href="corporate-partner.html">Learn More &#8250;</a>
-              </div>
-            </div>
-            <div class="content-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/volunteer-opp-3.png" />
-              <h2>Company Name</h2>
-              <h3>Project Name</h3>
-              <div class="button-container">
-                <a href="corporate-partner.html">Learn More &#8250;</a>
-              </div>
-            </div>
-          </aside>
+            <aside>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png"
+                    alt="Older Woman Smiling" />
+            </aside>
+            <aside>
+                <div class="content-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/aetna-page/volunteer_01.jpg" />
+                    <h2>Aetna</h2>
+                    <h3>Project Name</h3>
+                    <div class="button-container">
+                        <a href="corporate-partner.html">Learn More &#8250;</a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/design-pac/volunteer_02.jpg" />
+                    <h2>Design Pac</h2>
+                    <h3>Project Name</h3>
+                    <div class="button-container">
+                        <a href="corporate-partner.html">Learn More &#8250;</a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/caterpillar-inc/volunteer_01.jpg" />
+                    <h2>Caterpillar Inc.</h2>
+                    <h3>Project Name</h3>
+                    <div class="button-container">
+                        <a href="corporate-partner.html">Learn More &#8250;</a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/volunteer-opp-3.png" />
+                    <h2>Company Name</h2>
+                    <h3>Project Name</h3>
+                    <div class="button-container">
+                        <a href="corporate-partner.html">Learn More &#8250;</a>
+                    </div>
+                </div>
+            </aside>
         </article>
         <div class="button-container spotlight-button">
-          <a href="corporate-partner-landing-page.html">View All of Our Partners &#8250;</a>
+            <a href="corporate-partner-landing-page.html">View All of Our Partners &#8250;</a>
         </div>
-      </section>
-      <section id="faq">
+    </section>
+    <section id="faq">
         <div class="content-wrapper">
-          <h1>Frequently Asked <span>Questions</span></h1>
-          <h4>What is Charitable Team Building?</h4>
-          <p>Great Question! Charitable team building is when a volunteer opportunity is incorporated with a team building initiative that benefits the community!</p>
-          <h4>Who can get involved?</h4>
-          <p>Anyone! If you are a part of a company, a non profit, or local community group you can take part in a team building activity! Please see our available opportunities for more details.
-          <h4>How do I get Started?</h4>
-          <p>To get started, we just need some basic information about you and your group. Please use this link [insert volunteer email link] to sign up and one or our programs team members will connect with you shortly!</p>
-          <h4>Where are these opportunities held?</h4>
-          <p>Team building volunteer opportunities are held at each of our program locations. For more information on site locations, please follow this <a href="https://mowfni.org/cafes/find-a-cafe/">link</a>.</p>
-          <h4>What are the benefits of these opportunities?</h4>
-          <p>The idea behind combining corporate and social responsibility efforts with team building plans is to streamline two initiatives under one budget. Rather than just spend money on two distinct efforts, combining them allows funds to become tax deductible while lifting the spirits of employees and Meals on Wheels clients!</p>
-          <h4 class="more-questions">Have additional questions?</h4>
-          <div class="button-container">
-            <a href="mailto:swallace@mowfni.org">Contact Us &#8250;</a>
-          </div>
+            <h1>Frequently Asked <span>Questions</span></h1>
+            <h4>What is Charitable Team Building?</h4>
+            <p>Great Question! Charitable team building is when a volunteer opportunity is incorporated with a team
+                building initiative that benefits the community!</p>
+            <h4>Who can get involved?</h4>
+            <p>Anyone! If you are a part of a company, a non profit, or local community group you can take part in a
+                team building activity! Please see our available opportunities for more details.
+            <h4>How do I get Started?</h4>
+            <p>To get started, we just need some basic information about you and your group. Please use this link
+                [insert volunteer email link] to sign up and one or our programs team members will connect with you
+                shortly!</p>
+            <h4>Where are these opportunities held?</h4>
+            <p>Team building volunteer opportunities are held at each of our program locations. For more information on
+                site locations, please follow this <a href="https://mowfni.org/cafes/find-a-cafe/">link</a>.</p>
+            <h4>What are the benefits of these opportunities?</h4>
+            <p>The idea behind combining corporate and social responsibility efforts with team building plans is to
+                streamline two initiatives under one budget. Rather than just spend money on two distinct efforts,
+                combining them allows funds to become tax deductible while lifting the spirits of employees and Meals on
+                Wheels clients!</p>
+            <h4 class="more-questions">Have additional questions?</h4>
+            <div class="button-container">
+                <a href="mailto:swallace@mowfni.org">Contact Us &#8250;</a>
+            </div>
         </div>
-      </section>
+    </section>
 </main>
 <?php get_footer(); ?>

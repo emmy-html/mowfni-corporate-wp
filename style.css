@@ -1266,6 +1266,10 @@ footer#volunteer-page-footer {
     justify-content: space-evenly;
     width: 90%;
     margin: 0 auto; } }
+/* wordpress overrides */
+#menu-main-menu {
+  margin-top: 15px; }
+
 /* ==========================================================================
        Helper classes
        ========================================================================== */

@@ -33,4 +33,3 @@
                 <i class="fas fa-bars fa-2x" id="menu-toggle-button" onclick="hamburger()"></i>
             </div>
         </header>
-        <main>
