@@ -1,0 +1,124 @@
+/* adjust top of sections to compensate for padding when jumping from section to section */
+@mixin adjustment-padding {
+    padding-top: 90px;
+  }
+  /* buttons */
+  @mixin pill-button {
+    margin: 25px 0px;
+    text-align: center;
+    a:link,
+    a:visited {
+      background: $lime-green;
+      border: 3px solid $lime-green;
+      border-radius: 30px;
+      color: $dark-blue;
+      font-family: $heading-font;
+      font-size: 0.9rem;
+      font-weight: bold;
+      padding: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s background-color;
+      &:hover {
+        background: none;
+        transition: 0.3s background-color;
+      }
+    }
+  }
+  /* gray image filter */
+  @mixin grayscale-filter {
+    img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      width: 250px;
+      height: auto;
+      padding: 10px 0px;
+      transition: 0.3s filter;
+    }
+    &:hover {
+      img {
+        filter: none;
+        transition: 0.3s filter;
+      }
+    }
+  }
+  /* page title */ 
+  @mixin page-header {
+    width: 100%;
+    h1 {
+      background: $light-blue;
+      line-height: 1.75rem;
+      padding: 5px;
+      span {
+        font-weight: $light;
+      }
+    }
+  }
+  /* volunteer opportunities */ 
+  @mixin volunteer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* container for each opportunity */
+    aside {
+      @include grayscale-filter;
+      text-align: center;
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      &:not(:nth-of-type(1)) {
+        padding-top: 20px;
+      }
+    }
+    .button-container.volunteer-opp-button {
+      padding-bottom: 0px !important;
+    }
+    @media screen and (min-width: 768px) {
+      flex-flow: row wrap;
+      justify-content: space-around;
+      /* container for each opportunity */ 
+      aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px !important;
+        width: 25%;
+        height: 450px;
+        transition: .3s background-color;
+        img {
+          width: 300px;
+          height: 180px;
+          object-fit: cover;
+        }
+        p {
+          text-align: justify;
+          padding: 5px 0px;
+          width: 300px;
+        }
+        &:hover {
+          background: $lime-green;
+          transition: .3s all;
+          .button-container.volunteer-opp-button {
+            a:link,
+            a:visited {
+              background: $lime-green;
+              border: 3px solid $dark-blue;
+              &:hover {
+                background: #fff;
+                border: 3px solid $dark-blue;
+              }
+            }
+          }
+        }
+      }
+      .button-container.view-all {
+        padding: 5px 0px;
+      }
+    }
+  }
