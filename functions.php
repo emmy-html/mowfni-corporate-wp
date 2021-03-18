@@ -135,3 +135,41 @@ function mowfni_corporate_enqueue_scripts()
     wp_enqueue_script('plugin-script', get_template_directory_uri() . '/js/plugins.js', array(), true);
 }
 add_action('wp_enqueue_scripts', 'mowfni_corporate_enqueue_scripts');
+// Our custom post type function
+function create_posttype() {
+ 
+    register_post_type( 'volunteer_opp',
+    // custom post type options
+        array(
+            'labels' => array(
+                'name' => __( 'Volunteer Opportunities' ),
+                'singular_name' => __( 'Volunteer Opportunity' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'volunteer-opportunities'),
+            'show_in_rest' => true, 
+        )
+    );
+    register_post_type( 'corporate_partner',
+    // custom post type options
+        array(
+            'labels' => array(
+                'name' => __( 'Corporate Partners' ),
+                'singular_name' => __( 'Corporate Partner' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'corporate-partners'),
+            'show_in_rest' => true, 
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+function reg_tag() {
+    register_taxonomy_for_object_type('post_tag', 'volunteer_opp');
+    register_taxonomy_for_object_type('post_tag', 'corporate_partner');
+
+}
+add_action('init', 'reg_tag');

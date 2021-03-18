@@ -1150,6 +1150,7 @@ footer#volunteer-page-footer {
   }
   /* activity page */
   #activity-page {
+    min-height: 600px;
     .activity-info {
       display: flex;
       flex-flow: row nowrap;
@@ -1173,6 +1174,10 @@ footer#volunteer-page-footer {
           display: block;
           margin: 0 auto !important;
           width: 50%;
+        }
+        p {
+          width: 70%;
+          margin: 0 auto !important;
         }
       }
       .activity-hero {
