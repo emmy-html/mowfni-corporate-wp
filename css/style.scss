@@ -340,6 +340,7 @@ h6 {
 }
 h1 {
   font-weight: bold;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   span {
@@ -728,7 +729,16 @@ footer {
 /* volunteer page */
 #volunteer-page {
   .volunteer-page-hero {
-    background: url("../img/volunteer-hero.png") top / cover no-repeat;
+    /* volunteer landing page */ 
+    .button-container.volunteer-landing {
+        margin-top: 0px !important;
+        padding-top: 30px;
+        a:link,
+        a:visited {
+            margin: 0px 5px;
+        }
+    }
+    background: url("img/volunteer-hero.png") top / cover no-repeat;
     height: 400px;
     h1 {
       font-size: 1.5rem;
@@ -1081,7 +1091,7 @@ footer#volunteer-page-footer {
   }
   /* gift matching */
   #gift-matching {
-    background: url("../img/gift-matching-hero.png") top / 100% no-repeat;
+    background: url("img/gift-matching-hero.png") top / 100% no-repeat;
     min-height: 700px;
     article {
       margin-top: 30px;
@@ -1113,6 +1123,13 @@ footer#volunteer-page-footer {
   }
   /* volunteer page */
   #volunteer-page {
+    .volunteer-page-hero.volunteer-landing {
+        height: 600px;
+        background-size: 100%;
+        h1 {
+          padding-top: 400px;
+        }
+      }
     .volunteer-page-hero {
       background-size: contain;
       height: 830px;
@@ -1249,11 +1266,13 @@ footer#volunteer-page-footer {
       margin: 0 auto;
     }
   }
+  /* wordpress overrides */ 
+    #menu-main-menu,
+    #menu-secondary-menu {
+        margin-top: 15px;
+    }
 }
-/* wordpress overrides */ 
-#menu-main-menu {
-    margin-top: 15px;
-}
+
 /* ==========================================================================
        Helper classes
        ========================================================================== */
