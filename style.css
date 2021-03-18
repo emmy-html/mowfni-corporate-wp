@@ -1096,7 +1096,8 @@ footer#volunteer-page-footer {
     #volunteer h1 span {
       display: inline-block; }
   #volunteer .volunteer-opp aside {
-    width: 25%; }
+    width: 25%;
+    height: 410px; }
   #volunteer .button-container.view-all {
     padding: 5px 0px; }
 
@@ -1185,7 +1186,7 @@ footer#volunteer-page-footer {
     top: 450px;
     flex-grow: 1; }
     #volunteer-page .volunteer-page-opportunities aside {
-      width: 33% !important; }
+      width: 30% !important; }
 
   footer#volunteer-page-footer {
     position: absolute;

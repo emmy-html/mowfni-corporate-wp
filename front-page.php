@@ -88,36 +88,26 @@ Template Name: Front Page
         <h1>Team Building <span>Activities</span></h1>
         <div class="content-wrapper">
             <article class="volunteer-opp">
-                <aside>
-                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-1.png" />
-                    <h2>Deliver Meals</h2>
-                    <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <div class="button-container volunteer-opp-button">
-                        <a href="individual-activity.html">Learn More &#8250;</a>
-                    </div>
-                </aside>
-                <aside>
-                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-2.png" />
-                    <h2>Wellness Checks</h2>
-                    <h3><i class="far fa-clock"></i> Ongoing &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <div class="button-container volunteer-opp-button">
-                        <a href="individual-activity.html">Learn More &#8250;</a>
-                    </div>
-                </aside>
-                <aside>
-                    <img src="<?php echo get_template_directory_uri(); ?>img/volunteer-opp-3.png" />
-                    <h2>Blanket Making</h2>
-                    <h3><i class="far fa-clock"></i> 2 Hours &nbsp; <i class="fas fa-users"></i> 1-10 People</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <div class="button-container volunteer-opp-button">
-                        <a href="individual-activity.html">Learn More &#8250;</a>
-                    </div>
-                </aside>
+                    <?php
+                    $args = array('post_type' => 'volunteer_opp', 'orderby' => 'title', 'posts_per_page' => 3);
+                    $the_query = new WP_Query($args);
+                    ?>
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <aside>
+                                <img src="<?php the_field('image'); ?>" />
+                                <h2><?php the_field('name'); ?></h2>
+                                <h3><i class="far fa-clock"></i> <?php the_field('time'); ?> &nbsp; <i class="fas fa-users"></i> <?php the_field('people'); ?></h3>
+                                <p><?php the_field('short_description'); ?></p>
+                                <div class="button-container volunteer-opp-button">
+                                    <a href="<?php the_field('page_link'); ?>">Learn More &#8250;</a>
+                                </div>
+                            </aside>
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
+                    <?php else :  ?>
+                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                    <?php endif; ?>
             </article>
             <div class="button-container view-all">
                 <a href="/volunteer/corporate">Corporate &#8250;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -131,8 +121,7 @@ Template Name: Front Page
         </div>
         <article class="spotlight-partners">
             <aside>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png"
-                    alt="Older Woman Smiling" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png" alt="Older Woman Smiling" />
             </aside>
             <aside>
                 <div class="content-wrapper">

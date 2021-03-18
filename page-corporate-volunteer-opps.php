@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Volunteer Opportunities Landing Page
+Template Name: Corporate Volunteer Opportunities Landing Page
 */
 ?>
 <?php get_header(secondary); ?>
