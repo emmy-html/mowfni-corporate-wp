@@ -22,20 +22,32 @@ Template Name: (Single) Corporate Partner Page
         </article>
     </section>
     <section id="single-partner-page-work">
-            <h1>Their Work</h1>
-            <article class="single-partner-page-work-container">
-                <aside>
-                    <div class="content-wrapper">
-                        <img src="img/aetna-page/volunteer_01.jpg" alt="Volunteer Opportunity Filler Image" />
-                        <h2>Meal Delivery</h2>
-                        <h3>2019</h3>
-                        <div class="button-container volunteer-opp-button">
-                            <a href="single-partner-event-page.html">View More &#8250;</a>
+        <h1>Their Work</h1>
+        <article class="single-partner-page-work-container">
+            <?php
+            $args = array('post_type' => 'corporate_events', 'posts_per_page' => 10, 'orderby' => 'title', 'order' => 'ASC', 'tag' => get_field('company_name'));
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <aside>
+
+                        <div class="content-wrapper">
+                            <img src="<?php the_field('sidebar_image'); ?>" />
+                            <h2><?php the_field('event_name'); ?></h2>
+                            <h3><?php the_field('event_year'); ?></h3>
+                            <div class="button-container volunteer-opp-button">
+                                <a href="<?php the_field('event_page_url'); ?>">View More &#8250;</a>
+                            </div>
                         </div>
-                    </div>
-                </aside>
-            </article>
-        </section>
+                    </aside>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+            <?php else :  ?>
+                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+        </article>
+    </section>
 </main>
 
 <?php get_footer(); ?>
