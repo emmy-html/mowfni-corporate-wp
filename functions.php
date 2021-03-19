@@ -164,12 +164,26 @@ function create_posttype() {
             'show_in_rest' => true, 
         )
     );
+    register_post_type( 'corporate_events',
+    // custom post type options
+        array(
+            'labels' => array(
+                'name' => __( 'Corporate Events' ),
+                'singular_name' => __( 'Corporate Event' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'corporate-events'),
+            'show_in_rest' => true, 
+        )
+    );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 function reg_tag() {
     register_taxonomy_for_object_type('post_tag', 'volunteer_opp');
     register_taxonomy_for_object_type('post_tag', 'corporate_partner');
+    register_taxonomy_for_object_type('post_tag', 'corporate_events');
 
 }
 add_action('init', 'reg_tag');
