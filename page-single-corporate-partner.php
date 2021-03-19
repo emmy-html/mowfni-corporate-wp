@@ -9,7 +9,7 @@ Template Name: (Single) Corporate Partner Page
         <h1><?php the_field('company_name'); ?></h1>
         <article>
             <div class="content-wrapper">
-                <img src="<?php the_field('logo'); ?>" alt="<?php the_field('company_name'); ?> Logo" />
+                <img src="<?php the_field('logo'); ?>" alt="<?php the_field('company_display_name'); ?> Logo" />
                 <aside>
                     <h2>About <?php the_field('company_name'); ?></h2>
                     <p><span>Partners since <?php the_field('origin_year'); ?></span></p>
@@ -25,7 +25,8 @@ Template Name: (Single) Corporate Partner Page
         <h1>Their Work</h1>
         <article class="single-partner-page-work-container">
             <?php
-            $args = array('post_type' => 'corporate_events', 'posts_per_page' => 10, 'orderby' => 'title', 'order' => 'ASC', 'tag' => get_field('company_name'));
+            $company_slug = get_field('company_slug');
+            $args = array('post_type' => 'corporate_events', 'tag' => $company_slug, 'posts_per_page' => 10, 'orderby' => 'title', 'order' => 'ASC');
             $the_query = new WP_Query($args);
             ?>
             <?php if ($the_query->have_posts()) : ?>

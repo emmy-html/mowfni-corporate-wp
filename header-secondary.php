@@ -23,8 +23,8 @@
             </div>
             <div class="content-wrapper">
                 <!-- Logo -->
-                <img src="<?php echo get_template_directory_uri(); ?>/img/lime_logo.png"
-                    alt="The Meals On Wheels Foundation of Northern Illinois Logo" />
+                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/lime_logo.png"
+                    alt="The Meals On Wheels Foundation of Northern Illinois Logo" /></a>
                 <!-- Navigation links -->
                 <nav id="menu" class="hide-menu">
                     <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>

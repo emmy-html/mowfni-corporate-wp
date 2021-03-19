@@ -178,7 +178,6 @@ function create_posttype() {
         )
     );
 }
-// Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 function reg_tag() {
     register_taxonomy_for_object_type('post_tag', 'volunteer_opp');

@@ -918,7 +918,7 @@ footer#volunteer-page-footer {
   }
   .corporate-partner-page-hero {
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)),
-      url("../img/corporate-partner-hero.png") top / cover;
+      url("img/corporate-partner-hero.png") top / cover;
     height: 250px;
   }
   .corporate-partner-page-view-all {
@@ -1010,15 +1010,15 @@ footer#volunteer-page-footer {
     .volunteer-impact {
       height: 500px;
       h1 {
-        font-size: 3.75rem;
+        font-size: 4rem;
         padding: 0px;
+        padding-top: 35px;
       }
       aside {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         width: 100%;
-        margin-top: 30px !important;
         h3 {
           font-size: 5rem !important;
           line-height: 3.5rem !important;

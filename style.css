@@ -993,7 +993,7 @@ footer#volunteer-page-footer {
   #corporate-partner-page h1 span {
     display: inline-block; }
   #corporate-partner-page .corporate-partner-page-hero {
-    background: linear-gradient(to bottom, transparent, white), url("../img/corporate-partner-hero.png") top/cover;
+    background: linear-gradient(to bottom, transparent, white), url("img/corporate-partner-hero.png") top/cover;
     height: 250px; }
   #corporate-partner-page .corporate-partner-page-view-all {
     display: flex;
@@ -1072,14 +1072,14 @@ footer#volunteer-page-footer {
   #impact .volunteer-impact {
     height: 500px; }
     #impact .volunteer-impact h1 {
-      font-size: 3.75rem;
-      padding: 0px; }
+      font-size: 4rem;
+      padding: 0px;
+      padding-top: 35px; }
     #impact .volunteer-impact aside {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      width: 100%;
-      margin-top: 30px !important; }
+      width: 100%; }
       #impact .volunteer-impact aside h3 {
         font-size: 5rem !important;
         line-height: 3.5rem !important;

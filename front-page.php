@@ -40,7 +40,7 @@ Template Name: Front Page
                     of your co-workers, friends, and family but also the lives of children in foster care.</p>
                 <br>
                 <div class="button-container">
-                    <a href="/mowfni_corporate/volunteer">Learn More &#8250;</a>
+                    <a href="/volunteer">Learn More &#8250;</a>
                 </div>
             </div>
         </article>
@@ -51,7 +51,7 @@ Template Name: Front Page
                     employees? Your company, your spouses’ company, or even a company you are retired from may match
                     your gift! </p>
                 <div class="button-container">
-                    <a href="/mowfni_corporate/gift-matching">Match A Gift &#8250;</a>
+                    <a href="/gift-matching">Match A Gift &#8250;</a>
                 </div>
             </div>
         </article>
@@ -79,7 +79,7 @@ Template Name: Front Page
                     </h3>
                 </aside>
                 <div class="button-container">
-                    <a href="/mowfni_corporate/volunteer">Get Involved &#8250;</a>
+                    <a href="/volunteer">Get Involved &#8250;</a>
                 </div>
             </div>
         </article>
@@ -124,42 +124,29 @@ Template Name: Front Page
                 <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png" alt="Older Woman Smiling" />
             </aside>
             <aside>
-                <div class="content-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/aetna-page/volunteer_01.jpg" />
-                    <h2>Aetna</h2>
-                    <h3>Project Name</h3>
-                    <div class="button-container">
-                        <a href="corporate-partner.html">Learn More &#8250;</a>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/design-pac/volunteer_02.jpg" />
-                    <h2>Design Pac</h2>
-                    <h3>Project Name</h3>
-                    <div class="button-container">
-                        <a href="corporate-partner.html">Learn More &#8250;</a>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/caterpillar-inc/volunteer_01.jpg" />
-                    <h2>Caterpillar Inc.</h2>
-                    <h3>Project Name</h3>
-                    <div class="button-container">
-                        <a href="corporate-partner.html">Learn More &#8250;</a>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/volunteer-opp-3.png" />
-                    <h2>Company Name</h2>
-                    <h3>Project Name</h3>
-                    <div class="button-container">
-                        <a href="corporate-partner.html">Learn More &#8250;</a>
-                    </div>
-                </div>
+            <?php
+            $args = array('post_type' => 'corporate_events', 'posts_per_page' => 4, 'orderby' => 'title', 'order' => 'ASC');
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <div class="content-wrapper">
+                            <img src="<?php the_field('sidebar_image'); ?>" />
+                            <h2><?php the_field('company_name'); ?></h2>
+                            <h3><?php the_field('event_name'); ?></h3>
+                            <div class="button-container volunteer-opp-button">
+                                <a href="<?php the_field('event_page_url'); ?>">Learn More &#8250;</a>
+                            </div>
+                        </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+            <?php else :  ?>
+                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
             </aside>
         </article>
         <div class="button-container spotlight-button">
-            <a href="corporate-partner-landing-page.html">View All of Our Partners &#8250;</a>
+            <a href="/our-corporate-partners">View All of Our Partners &#8250;</a>
         </div>
     </section>
     <section id="faq">
