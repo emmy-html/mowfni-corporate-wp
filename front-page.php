@@ -18,6 +18,8 @@ Template Name: Front Page
                         <p class="slide"><?php the_field('company_2'); ?></p>
                         <p class="slide"><?php the_field('company_3'); ?></p>
                         <p class="slide"><?php the_field('company_4'); ?></p>
+                        <p class="slide"><?php the_field('company_5'); ?></p>
+                        <p class="slide"><?php the_field('company_6'); ?></p>
                     </span>
                 </h1>
                 <div class="hero-description">
@@ -35,9 +37,7 @@ Template Name: Front Page
         <article>
             <div class="content-wrapper">
                 <h2>We have team building service projects for everyone!</h2>
-                <p>Whether you are an individual, part of a group, or corporation, you can help children in your
-                    community with a fun team building project. Your kindness makes a difference in not only the lives
-                    of your co-workers, friends, and family but also the lives of children in foster care.</p>
+                <p>Whether you are an individual, part of a group, or corporation, you can help seniors in your community with a fun team-building project. Your kindness makes a difference in not only the lives of your co-workers, friends, or family you team up with, but also the lives of seniors in need.</p>
                 <br>
                 <div class="button-container">
                     <a href="/volunteer">Learn More &#8250;</a>
@@ -159,8 +159,7 @@ Template Name: Front Page
             <p>Anyone! If you are a part of a company, a non profit, or local community group you can take part in a
                 team building activity! Please see our available opportunities for more details.
             <h4>How do I get Started?</h4>
-            <p>To get started, we just need some basic information about you and your group. Please use this link
-                [insert volunteer email link] to sign up and one or our programs team members will connect with you
+            <p>To get started, we just need some basic information about you and your group. Please use this <a href="mailto:volunteer@cnnssa.org">link</a> to sign up and one or our programs team members will connect with you
                 shortly!</p>
             <h4>Where are these opportunities held?</h4>
             <p>Team building volunteer opportunities are held at each of our program locations. For more information on

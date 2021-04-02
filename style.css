@@ -465,12 +465,15 @@ nav {
       #hero .hero-content h1 span:nth-of-type(2) {
         font-weight: 300; }
       #hero .hero-content h1 span#slides-companies p {
-        color: #a9cf38; }
+        color: #a9cf38;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding-top: 10px; }
     #hero .hero-content .hero-description {
       padding-top: 10px;
       text-align: center; }
       #hero .hero-content .hero-description p {
-        line-height: 1.5rem;
+        line-height: 1rem;
         padding: 10px 0px; }
       #hero .hero-content .hero-description i {
         color: #fff;
@@ -1042,9 +1045,17 @@ footer#volunteer-page-footer {
       line-height: 2.1rem;
       padding-top: 75px; }
     #hero .hero-content .hero-description {
-      font-size: 1.5rem;
       margin: 0 auto;
       width: 600px; }
+      #hero .hero-content .hero-description p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        padding: 0px;
+        padding-top: 40px; }
+    #hero .hero-content span#slides-companies p.slide {
+      font-size: 2.75rem;
+      line-height: 2.5rem;
+      padding-top: 20px; }
 
   /* about */
   #about {
