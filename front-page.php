@@ -88,26 +88,26 @@ Template Name: Front Page
         <h1>Team Building <span>Activities</span></h1>
         <div class="content-wrapper">
             <article class="volunteer-opp">
-                    <?php
-                    $args = array('post_type' => 'volunteer_opp', 'orderby' => 'title', 'posts_per_page' => 3);
-                    $the_query = new WP_Query($args);
-                    ?>
-                    <?php if ($the_query->have_posts()) : ?>
-                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                            <aside>
-                                <img src="<?php the_field('image'); ?>" />
-                                <h2><?php the_field('name'); ?></h2>
-                                <h3><i class="far fa-clock"></i> <?php the_field('time'); ?> &nbsp; <i class="fas fa-users"></i> <?php the_field('people'); ?></h3>
-                                <p><?php the_field('short_description'); ?></p>
-                                <div class="button-container volunteer-opp-button">
-                                    <a href="<?php the_field('page_link'); ?>">Learn More &#8250;</a>
-                                </div>
-                            </aside>
-                        <?php endwhile;
-                        wp_reset_postdata(); ?>
-                    <?php else :  ?>
-                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-                    <?php endif; ?>
+                <?php
+                $args = array('post_type' => 'volunteer_opp', 'orderby' => 'title', 'posts_per_page' => 3);
+                $the_query = new WP_Query($args);
+                ?>
+                <?php if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <aside>
+                            <img src="<?php the_field('image'); ?>" />
+                            <h2><?php the_field('name'); ?></h2>
+                            <h3><i class="far fa-clock"></i> <?php the_field('time'); ?> &nbsp; <i class="fas fa-users"></i> <?php the_field('people'); ?></h3>
+                            <p><?php the_field('short_description'); ?></p>
+                            <div class="button-container volunteer-opp-button">
+                                <a href="<?php the_field('page_link'); ?>">Learn More &#8250;</a>
+                            </div>
+                        </aside>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
+                <?php else :  ?>
+                    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                <?php endif; ?>
             </article>
             <div class="button-container view-all">
                 <a href="/volunteer/corporate">Corporate &#8250;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -121,28 +121,34 @@ Template Name: Front Page
         </div>
         <article class="spotlight-partners">
             <aside>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/spotlight-hero.png" alt="Older Woman Smiling" />
+                &nbsp;
             </aside>
-            <aside>
-            <?php
-            $args = array('post_type' => 'corporate_events', 'posts_per_page' => 4, 'orderby' => 'title', 'order' => 'ASC');
-            $the_query = new WP_Query($args);
-            ?>
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="content-wrapper">
-                            <img src="<?php the_field('sidebar_image'); ?>" />
-                            <h2><?php the_field('company_name'); ?></h2>
-                            <h3><?php the_field('event_name'); ?></h3>
-                            <div class="button-container volunteer-opp-button">
-                                <a href="<?php the_field('event_page_url'); ?>">Learn More &#8250;</a>
+            <aside class="spotlight-container">
+                <div class="controls-container">
+                    <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <?php
+                $args = array('post_type' => 'corporate_events', 'posts_per_page' => 4, 'orderby' => 'title', 'order' => 'ASC');
+                $the_query = new WP_Query($args);
+                ?>
+                <?php if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <article class="mySlides fade">
+                            <div class="content-wrapper">
+                                <img src="<?php the_field('sidebar_image'); ?>" />
+                                <h2><?php the_field('company_name'); ?></h2>
+                                <h3><?php the_field('event_name'); ?></h3>
+                                <div class="button-container volunteer-opp-button">
+                                    <a href="<?php the_field('event_page_url'); ?>">Learn More &#8250;</a>
+                                </div>
                             </div>
-                        </div>
-                <?php endwhile;
-                wp_reset_postdata(); ?>
-            <?php else :  ?>
-                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-            <?php endif; ?>
+                        </article>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
+                <?php else :  ?>
+                    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                <?php endif; ?>
             </aside>
         </article>
         <div class="button-container spotlight-button">
@@ -176,4 +182,4 @@ Template Name: Front Page
         </div>
     </section>
 </main>
-<?php get_footer(); ?>
+<?php get_footer('front-page'); ?>
