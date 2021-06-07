@@ -383,6 +383,81 @@ body {
 .button-container {
   @include pill-button;
 }
+/* popover */
+.sticky {
+  z-index: 9999;
+  position: fixed;
+  top: 600px;
+} 
+.hide-topbar {
+  display: none;
+}
+#popover {
+  background: #fff;
+  visibility: hidden;
+  .popover-content {
+    background: $lime-green;
+    color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0px;
+    button {
+      background: none;
+      border: none;
+      color: $dark-blue;
+      font-family: $heading-font;
+      font-size: 0.75rem;
+      font-weight: 900;
+      margin-left: 280px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+    }
+    h2 {
+      font-weight: 400;
+      line-height: 1.5rem;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    .donation-form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+      max-width: 300px;
+      p {
+        margin: 0px;
+        padding: 0px 5px;
+      }
+      .donate-button {
+        background: $dark-blue;
+        border-bottom: none;
+        padding: 10px;
+        color: #fff;
+        font-family: $heading-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+          background: $light-blue;
+          border-bottom: none;
+          color: $dark-blue;
+          transition: 1s background-color;
+          transition: 1s color;
+        }
+        &:nth-of-type(1) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
 /* hamburger menu */
 header {
   background: $dark-blue;
@@ -1015,8 +1090,65 @@ footer#volunteer-page-footer {
     }
   }
 }
+/* donation page template */
+#hidden-donation-page-template {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  .donation-page-content-container {
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    img {
+      width: 100%;
+    }
+    .donation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      font-weight: 400;
+      line-height: 2rem;
+      text-transform: none;
+      padding: 20px 0px;
+    }
+  }
+}
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
+  /* popover */ 
+  #popover {
+    padding: 0px !important;
+    visibility: visible;
+    .popover-content {
+      border-radius: 15px 0px 0px 15px;
+      width: 325px;
+      height: 180px;
+      right: 0px;
+      padding: 0px !important;
+      .content-wrapper {
+        h1 {
+          font-size: 1.75rem;
+          line-height: 1.65rem;
+          margin-top: -20px !important;
+        }
+        h2 {
+          padding-bottom: 10px;
+        }
+        .donation-form-container {
+          width: 240px;
+          margin: 0 auto;
+          .donation-form-filler {
+            width: 23px;
+          }
+        }
+      }
+    }
+  }
   /* header */
   .hide-menu {
     display: block !important; /* override hidden navigation on large screens */
@@ -1403,7 +1535,40 @@ footer#volunteer-page-footer {
     #menu-secondary-menu {
         margin-top: 15px;
     }
-}
+    #hidden-donation-page-template {
+      .donation-page-content-container {
+        display: flex;
+        flex-direction: row !important;
+        .donation-container {
+          width: 400px !important;
+        }
+        aside:nth-of-type(1) {
+          background: url("img/gift-matching-hero.png") top / 100% no-repeat;
+          min-height: 700px;
+          width: 110%;
+        }
+        aside {
+          width: 45%;
+        }
+        article {
+          width: 40%;
+        }
+      }
+      .content-wrapper {
+        h2 {
+          font-size: 2rem;
+          line-height: 2rem;
+          min-width: 700px;
+          max-width: 710px;
+          margin: 0 auto;
+        }
+        .donation-container {
+          margin: 0 auto;
+          padding-left: 60px;
+        }
+      }
+    }
+  }
 
 /* ==========================================================================
        Helper classes

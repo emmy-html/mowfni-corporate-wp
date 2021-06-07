@@ -370,6 +370,72 @@ body {
       background: none;
       transition: 0.3s background-color; }
 
+/* popover */
+.sticky {
+  z-index: 9999;
+  position: fixed;
+  top: 600px; }
+
+.hide-topbar {
+  display: none; }
+
+#popover {
+  background: #fff;
+  visibility: hidden; }
+  #popover .popover-content {
+    background: #a9cf38;
+    color: #003952;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0px; }
+    #popover .popover-content button {
+      background: none;
+      border: none;
+      color: #003952;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 900;
+      margin-left: 280px; }
+    #popover .popover-content h1 {
+      font-size: 1.5rem;
+      line-height: 1.25rem; }
+    #popover .popover-content h2 {
+      font-weight: 400;
+      line-height: 1.5rem;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      text-align: center; }
+    #popover .popover-content .donation-form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+      max-width: 300px; }
+      #popover .popover-content .donation-form-container p {
+        margin: 0px;
+        padding: 0px 5px; }
+      #popover .popover-content .donation-form-container .donate-button {
+        background: #003952;
+        border-bottom: none;
+        padding: 10px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none; }
+        #popover .popover-content .donation-form-container .donate-button:hover {
+          background: #00b5c2;
+          border-bottom: none;
+          color: #003952;
+          transition: 1s background-color;
+          transition: 1s color; }
+        #popover .popover-content .donation-form-container .donate-button:nth-of-type(1) {
+          margin-right: 10px; }
+
 /* hamburger menu */
 header {
   background: #003952;
@@ -1067,8 +1133,60 @@ footer#volunteer-page-footer {
         font-weight: 300;
         font-size: 2rem; }
 
+/* donation page template */
+#hidden-donation-page-template {
+  width: 100%;
+  background: #fff;
+  color: #003952; }
+  #hidden-donation-page-template h1 {
+    background: #00b5c2;
+    line-height: 1.75rem;
+    padding: 5px; }
+    #hidden-donation-page-template h1 span {
+      font-weight: 300; }
+  #hidden-donation-page-template .donation-page-content-container {
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    #hidden-donation-page-template .donation-page-content-container img {
+      width: 100%; }
+    #hidden-donation-page-template .donation-page-content-container .donation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    #hidden-donation-page-template .donation-page-content-container h2 {
+      font-weight: 400;
+      line-height: 2rem;
+      text-transform: none;
+      padding: 20px 0px; }
+
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
+  /* popover */
+  #popover {
+    padding: 0px !important;
+    visibility: visible; }
+    #popover .popover-content {
+      border-radius: 15px 0px 0px 15px;
+      width: 325px;
+      height: 180px;
+      right: 0px;
+      padding: 0px !important; }
+      #popover .popover-content .content-wrapper h1 {
+        font-size: 1.75rem;
+        line-height: 1.65rem;
+        margin-top: -20px !important; }
+      #popover .popover-content .content-wrapper h2 {
+        padding-bottom: 10px; }
+      #popover .popover-content .content-wrapper .donation-form-container {
+        width: 240px;
+        margin: 0 auto; }
+        #popover .popover-content .content-wrapper .donation-form-container .donation-form-filler {
+          width: 23px; }
+
   /* header */
   .hide-menu {
     display: block !important;
@@ -1367,7 +1485,30 @@ footer#volunteer-page-footer {
   /* wordpress overrides */
   #menu-main-menu,
   #menu-secondary-menu {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  #hidden-donation-page-template .donation-page-content-container {
+    display: flex;
+    flex-direction: row !important; }
+    #hidden-donation-page-template .donation-page-content-container .donation-container {
+      width: 400px !important; }
+    #hidden-donation-page-template .donation-page-content-container aside:nth-of-type(1) {
+      background: url("img/gift-matching-hero.png") top/100% no-repeat;
+      min-height: 700px;
+      width: 110%; }
+    #hidden-donation-page-template .donation-page-content-container aside {
+      width: 45%; }
+    #hidden-donation-page-template .donation-page-content-container article {
+      width: 40%; }
+  #hidden-donation-page-template .content-wrapper h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    min-width: 700px;
+    max-width: 710px;
+    margin: 0 auto; }
+  #hidden-donation-page-template .content-wrapper .donation-container {
+    margin: 0 auto;
+    padding-left: 60px; } }
 /* ==========================================================================
        Helper classes
        ========================================================================== */

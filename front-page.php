@@ -3,7 +3,7 @@
 Template Name: Front Page
 */
 ?>
-<?php get_header(); ?>
+<?php get_header('front-page'); ?>
 <main id="content">
     <section id="hero">
         <article class="hero-content">

@@ -32,3 +32,7 @@ document.addEventListener(
   },
   false
 );
+function closePopover() {
+  var popover = document.getElementById("popover");
+  popover.classList.add("hide-topbar");
+}
